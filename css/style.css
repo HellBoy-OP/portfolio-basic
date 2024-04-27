@@ -710,6 +710,17 @@ form {
     font-weight: 700;
 }
 
+.input-subject:focus,
+.input-textarea:focus {
+    border: 1px solid var(--skin-color);
+}
+
+.input-subject:hover,
+.input-textarea:hover {
+    transform: scale(1.05);
+    transition: all .3s ease;
+}
+
 form button {
     padding: 8px 24px;
     font-family: poppins;
@@ -727,6 +738,7 @@ form button {
 form button:hover {
     opacity: 1;
     transform: scale(1.05);
+    transition: all .3s ease;
 }
 
 .contact .contact-info .timeline-box {
@@ -755,6 +767,35 @@ form button:hover {
 
 .contact .contact-info .timeline .timeline-item:last-child {
     padding-bottom: 0;
+}
+
+.contact .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--skin-color);
+    border-radius: 15px;
+    padding: 8px;
+}
+  
+.contact .popup .popup-content {
+    background-color: var(--bg-black-100);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--text-black-700);
+    font-weight: 600;
+    text-align: center;
+}
+  
+.contact .popup .popup-content .popup-close {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    cursor: pointer;
+    color: var(--text-black-900);
+    font-size: 20px;
 }
 
 
@@ -815,11 +856,3 @@ form button:hover {
         transform: translateX(0);
     }
 }
-
-
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #14131a;
-} */

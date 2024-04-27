@@ -31,7 +31,7 @@
             </ul>
         </div>
         <div class="main-content">
-            <section class="home active section " id="home">
+            <section class="home active section" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about section " id="about">
+            <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15"><h2>About Me</h2></div>
@@ -141,7 +141,7 @@
                     </div>
                 </div>
             </section>
-            <section class="portfolio section " id="portfolio">
+            <section class="portfolio section" id="portfolio">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15"><h2>Portfolio</h2></div>
@@ -208,11 +208,12 @@
                                     <div class="timeline shadow-dark">
                                         <h3 class="title">Message Me</h3>
                                         <form action="#" id="myForm">
-                                            <input id="name" type="text" placeholder="Name" class="input-subject">
-                                            <input id="email" type="email" placeholder="Email" class="input-subject">
-                                            <input id="subject" type="text" placeholder="Subject" class="input-subject">
-                                            <textarea id="body" class="input-textarea" placeholder="Message"></textarea>
-                                            <button type="button" id="submit" value="send">Submit</button>
+                                            <input type="hidden" name="access_key" value="{{ APIKEY }}">
+                                            <input id="name" name="name" type="text" placeholder="Your Name" class="input-subject" required>
+                                            <input id="email" name="email" type="email" placeholder="Your Email" class="input-subject" required>
+                                            <input id="subject" name="subject" type="text" placeholder="Subject" class="input-subject" required>
+                                            <textarea id="body" name="message" placeholder="Message" class="input-textarea" required></textarea>
+                                            <button type="submit" id="submit-btn">Submit</button>
                                         </form>
                                     </div>
                                 </div>
@@ -258,6 +259,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="popup">
+                    <div class="popup-content">
+                        <span class="popup-close"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <p class="popup-text">The message was sent!</p>
+                    </div>
+                </div>
             </section>
             <section class="section"></section>
         </div>
@@ -279,5 +286,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
+    <script src="js/send-email.js"></script>
 </body>
 </html>
