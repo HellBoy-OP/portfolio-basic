@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
 
 * {
     margin: 0;
@@ -193,9 +194,10 @@ ul {
 }
 
 .aside .logo a span {
-    font-family: 'Montserrat', cursive;
+    font-family: "Arizonia";
     font-weight: 700;
     font-size: 45px;
+    padding-right: 3px;
 }
 
 .aside .logo a::before {
@@ -359,6 +361,7 @@ h3.profession {
     margin: auto;
     border-radius: 10px;
     height: 350px;
+    width: 310px;
 }
 
 .home-img::after {
@@ -366,8 +369,8 @@ h3.profession {
     position: absolute;
     height: 90px;
     width: 90px;
-    right: -5px;
-    bottom: -20px;
+    right: -10px;
+    bottom: -10px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
 }
@@ -377,8 +380,8 @@ h3.profession {
     position: absolute;
     height: 90px;
     width: 90px;
-    left: -5px;
-    top: -20px;
+    left: -10px;
+    top: -10px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
 }

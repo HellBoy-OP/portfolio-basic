@@ -7,9 +7,9 @@
     <title>Anand ~</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-switcher.css">
-    <link rel="stylesheet" href="css/colors/color-1.css" class="alternate-style" title="color-1">
+    <link rel="stylesheet" href="css/colors/color-1.css" class="alternate-style" title="color-1" disabled>
     <link rel="stylesheet" href="css/colors/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="css/colors/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/colors/color-3.css" class="alternate-style" title="color-3">
     <link rel="stylesheet" href="css/colors/color-4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet" href="css/colors/color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -208,7 +208,7 @@
                                     <div class="timeline shadow-dark">
                                         <h3 class="title">Message Me</h3>
                                         <form action="#" id="myForm">
-                                            <input type="hidden" name="access_key" value="{{ APIKEY }}">
+                                            <input type="hidden" name="access_key" value="">
                                             <input id="name" name="name" type="text" placeholder="Your Name" class="input-subject" required>
                                             <input id="email" name="email" type="email" placeholder="Your Email" class="input-subject" required>
                                             <input id="subject" name="subject" type="text" placeholder="Subject" class="input-subject" required>
@@ -285,7 +285,8 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/getEnv.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/send-email.js"></script>
+    <script src="js/sendEmail.js"></script>
 </body>
 </html>

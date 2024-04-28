@@ -76,7 +76,8 @@ const showSection = (element) => {
 }
 
 navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
         navLinks.forEach((link) => {
             link.classList.remove("active");
         })
@@ -115,7 +116,8 @@ navToggleBtn.addEventListener("click", () => {
 
 
 // contact button
-contactBtn.addEventListener("click", () => {
+contactBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     showSection(contactBtn);
     updaetNav(contactBtn);
 })
