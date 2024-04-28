@@ -744,6 +744,12 @@ form button:hover {
     transition: all .3s ease;
 }
 
+form button.disabled {
+    color: var(--text-black-900);
+    background: var(--bg-black-50);
+    cursor: not-allowed;
+}
+
 .contact .contact-info .timeline-box {
     flex: 0 0 100%;
     max-width: 100%;

@@ -13,6 +13,9 @@ form.addEventListener("submit", async (e) => {
     const formData = new FormData(form);
     e.preventDefault();
 
+    submitBtn.classList.add("disabled");
+    submitBtn.textContent = "Sending...";
+
     const object = Object.fromEntries(formData.entries());
     object.access_key = APIKEY;
     const json = JSON.stringify(object);
@@ -27,6 +30,9 @@ form.addEventListener("submit", async (e) => {
         body: json
     })
 
+    submitBtn.classList.remove("disabled");
+    submitBtn.textContent = "Submit";
+
     let data = await response.json();
     if (response.status === 200) {
         displayPopup(data.message);
@@ -37,6 +43,12 @@ form.addEventListener("submit", async (e) => {
     form.reset();
 })
 
+// close the popup
+const closePopup = () => {
+    popup.style.display = "none";
+}
+
+// display the popup
 const displayPopup = (message) => {
     const popupMessage = document.querySelector(".popup-text");
     popupMessage.innerText = message;
@@ -44,11 +56,12 @@ const displayPopup = (message) => {
 
     // automatically close the popup after 5 seconds
     setTimeout(() => {
-        popup.style.display = "none";
+        closePopup();
     }, 5000);
 }
 
+// close the popup when close button is clicked
 popupCloseBtn.addEventListener("click", () => {
-    popup.style.display = "none";
+    closePopup();
 });
 
