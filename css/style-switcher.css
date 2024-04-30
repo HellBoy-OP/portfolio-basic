@@ -2,7 +2,8 @@
     position: fixed;
     right: 0;
     top: 60px;
-    padding: 15px;
+    padding: 5px;
+    height: 41px;
     width: 225px;
     border: 1px solid var(--bg-black-50);
     background: var(--bg-black-100);
@@ -31,6 +32,13 @@
     transition: all 0.3s ease;
     border-radius: 50%
 }
+
+.style-switcher.open .s-icon {
+    right: 0;
+    margin-right: 0;
+    border-radius: 5px;
+}
+
 
 .style-switcher .s-icon i {
     line-height: 40px;
