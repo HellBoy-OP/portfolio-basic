@@ -8,6 +8,7 @@ const sections = document.querySelectorAll("section");
 const navToggleBtn = document.querySelector(".nav-toggler");
 const aside = document.querySelector(".aside");
 const contactBtn = document.querySelector(".read-more");
+const copyrightYear = document.querySelector(".copyright-year");
 
 
 // Style Switcher
@@ -121,3 +122,9 @@ contactBtn.addEventListener("click", (e) => {
     showSection(contactBtn);
     updaetNav(contactBtn);
 })
+
+
+// update year
+const year = new Date().getFullYear();
+
+copyrightYear.textContent = `~ ${year}`;

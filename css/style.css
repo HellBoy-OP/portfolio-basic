@@ -807,6 +807,35 @@ form button.disabled {
     font-size: 20px;
 }
 
+.footer {
+    background: var(--bg-black-100);
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    display: flex;
+    font-family: poppins;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-text {
+    position: relative;
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 1;
+}
+
+.footer .footer-text i {
+    margin-right: 5px;
+}
+
+.footer .footer-text .copyright-text {
+    color: var(--skin-color);
+}
+
 
 @media (max-width:1199px) {
     .section .container {
