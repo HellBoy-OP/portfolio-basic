@@ -129,7 +129,7 @@ const projects = document.querySelectorAll(".portfolio-img>img");
 projects.forEach((project) => {
     project.addEventListener("click", () => {
         if (project && project.id !== "") {
-            const fileName = `./html/${project.id}.html`;
+            const fileName = `/${project.id}`;
             window.open(fileName, "_self");
         }
     })
