@@ -124,6 +124,18 @@ contactBtn.addEventListener("click", (e) => {
 })
 
 
+// open projects
+const projects = document.querySelectorAll(".portfolio-img>img");
+projects.forEach((project) => {
+    project.addEventListener("click", () => {
+        if (project && project.id !== "") {
+            const fileName = `./html/${project.id}.html`;
+            window.open(fileName, "_self");
+        }
+    })
+})
+
+
 // update year
 const year = new Date().getFullYear();
 
